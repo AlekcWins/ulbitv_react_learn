@@ -8,9 +8,15 @@
 # Rating
 # Basket
 ? Container - ROW(NOT WORKING)
-
-
+# split device store into device store type store and brand store
+# normal handle errors for create TYPE BRAND Device
+# add security for admin panel only ADMIN
+#device add price validation
+#device add img validation
+#upgrade pagination - first last and ... for more pages
+# if you want find all devices when you click on any type or brand
 
 --BACKEND --
 # Rating
 # Basket
+# normal handle errors for create TYPE BRAND Device

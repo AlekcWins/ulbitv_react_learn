@@ -46,7 +46,7 @@ class UserController {
         if (!comparePassword) {
             return next(ApiError.internal('неправильный пароль'))
         }
-        const token = generateJWT(user.id, user.email, user.password)
+        const token = generateJWT(user.id, user.email, user.role)
         return res.json({token})
     }
 

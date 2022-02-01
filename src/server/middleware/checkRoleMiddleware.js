@@ -14,6 +14,7 @@ module.exports = function (role) {
                 return res.status(401).json({message: 'Не авторизован'})
             }
             const decoded = jwt.verify(token, secretJWTKey)
+            console.log(decoded)
             if (decoded.role !== role) {
                 return res.status(403).json({message: 'Нет доступа'})
             }

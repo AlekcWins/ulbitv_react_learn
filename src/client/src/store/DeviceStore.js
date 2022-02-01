@@ -2,42 +2,16 @@ import {makeAutoObservable} from "mobx";
 
 export default class DeviceStore {
 
+
     constructor() {
-        this._types = [
-            {id: 1, name: "Холодильники"},
-            {id: 2, name: "Телефоны"},
-            {id: 3, name: "Что то "},
-        ];
-        this._brands = [
-            {id: 1, name: "Брэнд1"},
-            {id: 2, name: "Брэнд2"},
-            {id: 3, name: "Брэнд3"},
-        ];
-        this._devices = [
-            {
-                id: 1,
-                name: "Name1",
-                price: 1,
-                rating: 5,
-                img: "https://appleinsider.ru/wp-content/uploads/2020/04/sberbank_app_new.jpg"
-            },
-            {
-                id: 2,
-                name: "Name2",
-                price: 1,
-                rating: 5,
-                img: "https://appleinsider.ru/wp-content/uploads/2020/04/sberbank_app_new.jpg"
-            },
-            {
-                id: 3,
-                name: "Name3",
-                price: 1,
-                rating: 5,
-                img: "https://appleinsider.ru/wp-content/uploads/2020/04/sberbank_app_new.jpg"
-            },
-        ];
+        this._types = [];
+        this._brands = [];
+        this._devices = [];
         this._selectedType = {}
         this._selectedBrand = {}
+        this._page = 1
+        this._totalCount = 0
+        this._limitPerPage = 3
         makeAutoObservable(this)
     }
 
@@ -80,5 +54,28 @@ export default class DeviceStore {
 
     get selectedBrand() {
         return this._selectedBrand
+    }
+    get page() {
+        return this._page;
+    }
+
+    get totalCount() {
+        return this._totalCount;
+    }
+
+    get limitPerPage() {
+        return this._limitPerPage;
+    }
+
+    setPage(value) {
+        this._page = value;
+    }
+
+    setTotalCount(value) {
+        this._totalCount = value;
+    }
+
+    setLimitPerPage(value) {
+        this._limitPerPage = value;
     }
 }
