@@ -11,33 +11,37 @@
 
 ##### in resources have figma file
 
-## Installation
+## Development
+
+### Installation
 
 Requires 
 - [Node.js](https://nodejs.org/) 
+###SERVER
+1) Copy abd rename file env.example to .env
+2) Insert data in .env file
 
 Install the dependencies and devDependencies and start the server.
 
 ```sh
 cd ./src/server
 npm i
-```
-
-
-
-
-## Development
-
-
-
-```sh
-cd ./src/server
 npm run dev
 ```
 
 
+##CLIENT
+1) Copy abd rename file env.example to .env
+2) Insert data in .env file
+
+Install the dependencies and devDependencies and start the server.
 
 
+```sh
+cd ./src/client
+npm i
+npm run start
+```
 
 
 
